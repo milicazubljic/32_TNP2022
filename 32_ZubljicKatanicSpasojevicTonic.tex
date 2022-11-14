@@ -4,20 +4,15 @@
 
 \usepackage{color}
 \usepackage{url}
-\usepackage[T2A]{fontenc} % enable Cyrillic fonts
 \usepackage[utf8]{inputenc} % make weird characters work
 \usepackage{graphicx}
 \usepackage{amsfonts}
 \usepackage{multirow}
 
 \usepackage[english,serbian]{babel}
-%\usepackage[english,serbianc]{babel} %ukljuciti babel sa ovim opcijama, umesto gornjim, ukoliko se koristi cirilica
 
 \usepackage[unicode]{hyperref}
 \hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
-
-%\newtheorem{primer}{Пример}[section] %ćirilični primer
-\newtheorem{primer}{Primer}[section] %biće redefinisano kasnije
 
 
 \begin{document}
@@ -25,7 +20,7 @@
 \title{Vrste beskonačnosti. Paradoks Hilbertovog hotela\\ \small{Seminarski rad u okviru kursa\\Tehničko i naučno pisanje\\ Matematički fakultet}}
 
 \author{Milica Zubljić\\ Branko Katanić\\ Dimitrije Spasojević\\ Luka Tonić\\ mi22047@alas.matf.bg.ac.rs}
-\date{14.~novembar 2022.}
+\date{14.~novembar 2022}
 \maketitle
 
 \abstract{
@@ -88,7 +83,7 @@ Nama najintuitivniji od njih jeste skup prirodnih brojeva ($\mathbb{N}$). U teor
 
 Pošto članove navedenih skupova možemo poredjati u niz iako ih ima beskonačno mnogo, kažemo da oni imaju \textbf{prebrojivo mnogo} elemenata. Formalnije, za neki skup kažemo da je prebrojiv ako postoji bijekcija $f$ sa skupa prirodnih brojeva u taj skup.
 
-Dakle, govorimo o \textbf{prebrojivoj beskonačnosti}. Ona se u matematici obeležava sa $\aleph_{0}$ ($\aleph$ - prvo slovo hebrejske azbuke). Ovu oznaku prvi je uveo nemački naučnik Georg Kantor u 19. veku\\
+Dakle, govorimo o \textbf{prebrojivoj beskonačnosti}. Ona se u matematici obeležava sa $\aleph_{0}$ ($\aleph$ - prvo slovo hebrejske azbuke).\\
 
 S druge strane, govoreći o skupovima iracionalnih ($\mathbb{I}$) i realnih ($\mathbb{R}$) brojeva, ne postoji metoda kojom bismo njihove elemente mogli poredjati u niz i sve ih nabrojati. Zato kažemo da ovakvi skupovi imaju \textbf{neprebrojivo mnogo} elemenata i govorimo o \textbf{neprebrojivoj beskonačnosti}. Više o tome u nekom od sledećih poglavlja.
 
@@ -96,34 +91,37 @@ S druge strane, govoreći o skupovima iracionalnih ($\mathbb{I}$) i realnih ($\m
 \newpage
 
 \section{Hilbertov hotel. Konačan broj novih gostiju}
-U 19. veku Georg Kantor je uveo pojam kardinalnosti i prebrojivosti skupova. Njegova teorija naišla je na mnogo osuda tadašnjih cenjenih matematičara.
-Jedan od ljudi koji je ipak prepoznao njen značaj bio je David Hilbert.
+\label{poglavlje:Hilbertov hotel. Konačan broj novih gostiju}
+U 19. veku Georg Kantor uveo je pojam kardinalnosti i prebrojivosti skupova. Njegova teorija naišla je na osudu tadašnjih cenjenih matematičara.
+Jedan od ljudi koji je ipak prepoznao njen značaj bio je David Hilbert\cite{David Hilbert}.
 On je uspeo da nam vrlo slikovito približi pojam beskonačnosti, opisavši problem smeštanja beskonačno mnogo gostiju u hotel sa beskonačno mnogo soba - \textbf{Hilbertov hotel.}
+
 Hilbertov hotel je hotel koji ima beskonačno mnogo soba i sve su popunjene. Da li u njega ipak može stati jos gostiju?
 
 \subsection{Konačan broj novih gostiju}
 Dakle, ispred potpuno punog hotela nalazi se jedan gost koji traži sobu. Kako rešiti ovaj problem?
-Novu sobu možemo osloboditi ako zamolimo gosta iz sobe 1 da predje u sobu 2, gosta iz sobe 2 u sobu 3 i tako dalje. Dakle, gost iz sobe \textit{n} prelazi u sobu \textit{n+1}.
-Pošto na raspolaganju imamo beskonačan broj soba, za svaku sobu \textit{n} će postojati soba \textit{n+1}, pa ćemo lako smestiti sve goste u nove sobe i tako osloboditi sobu broj 1.
-Ovaj isti postupak može se primeniti na bilo koji konačan broj gostiju. Na primer, ako treba osloboditi 100 novih soba, svakog gosta ćemo premestiti iz svoje sobe u sobu čiji je broj za 100 veći.
+
+Novu sobu možemo osloboditi ako zamolimo gosta iz sobe 1 da predje u sobu 2, gosta iz sobe 2 da predje u sobu 3 i tako dalje. Dakle, gost iz sobe $n$ prelazi u sobu $n+1$.
+Pošto na raspolaganju imamo beskonačan broj soba, za svaku sobu $n$ postojaće soba $n+1$, pa ćemo lako smestiti sve goste u nove sobe i tako osloboditi sobu broj 1.
+Ovaj isti postupak može se primeniti na bilo koji konačan broj gostiju. Na primer, ako treba osloboditi 100 novih soba, svakog gosta ćemo premestiti iz njegove sobe u sobu čiji je broj za 100 veći.
+
 Na malo komplikovaniji problem nailazimo kada na red ne čeka konačan broj gostiju.\\
 
 \section{Beskonačan broj gostiju}
 \label{poglavlje:beskonačan broj gostiju}
 Pred hotelom se sada nalazi beskonačno veliki autobus sa \textbf {prebrojivo} beskonačno mnogo putnika.
-U našem primeru Hilbertovog hotela, jasno je da je činjenica da gostiju ima \textbf {prebrojivo} mnogo ključna ako hocemo da ih rasporedimo po sobama.
+U našem primeru Hilbertovog hotela, jasno je da je činjenica da gostiju ima \textbf {prebrojivo} ključna ako hoćemo da ih rasporedimo po sobama.
 Ovaj problem možemo rešiti tako što ćemo gosta iz prve sobe zamoliti da predje u drugu, gosta iz druge u četvrtu, iz treće u šestu i tako dalje.
-Uopšteno, gost iz sobe \textbf {n} prelazi u sobu \textbf {2n}. Ovim procesom smo oslobili sve sobe sa neparnim brojem.
+Uopšteno, gost iz sobe \textbf{n} prelazi u sobu \textbf{2n}. Ovim procesom oslobodili smo sve sobe sa neparnim brojem.
 Pošto neparnih brojeva ima beskonačno mnogo, to ostavlja dovoljno mesta za sve putnike beskonačno velikog autobusa.
 
 \subsection {Dokaz o beskonačnosti skupa neparnih brojeva}
 Pretpostavimo suprotno, to jest da je skup neparnih brojeva konačan.
-To znači da postoji najveći broj \textit{n} iz tog skupa.
-Svaki neparni broj možemo zapisati u obliku \textit{2p+1}, gde je \textit{p} bilo koji ceo broj, pa tako možemo zapisati i ovaj najveći broj.
-Sada razmatrajmo broj \textit{n+2}. \textit{n+2=2p+1+2=2(p+1)+1}.
-Broj \textit{2(p+1)} očigledno je paran, pa zaključujemo da je broj \textit{n+2} neparan, a u isto vreme veći od najvećeg neparnog broja.
+To znači da postoji najveći broj $n$ iz tog skupa.
+Svaki neparni broj možemo zapisati u obliku $2p+1$, gde je $p$ bilo koji ceo broj, pa tako možemo zapisati i ovaj najveći broj.
+Sada razmatrajmo broj $n+2$: $n+2=2p+1+2=2(p+1)+1$.
+Broj $2(p+1)$ očigledno je paran, pa zaključujemo da je broj $n+2$ neparan, a u isto vreme veći od najvećeg neparnog broja.
 Ovim zaključkom dolazimo do kontradikcije, što znači da smo dokazali da neparnih brojeva ima beskonačno mnogo.
-
 
 
 
@@ -133,9 +131,11 @@ Ovim zaključkom dolazimo do kontradikcije, što znači da smo dokazali da nepar
 \label{poglavlje:Beskonačan broj autobusa sa po beskonačno mnogo gostiju}
 Ovog puta imamo beskonačnu kolonu beskonačno velikih autobusa, sa po \textbf {prebrojivo} beskonačno putnika. Da bismo svakom novom gostu dodelili sobu, potrebno je svakom već postojećem gostu dodeliti prvi prost broj, 2, stepenovan brojem njihove sobe. Tako gost iz sobe broj 7 odlazi u sobu broj $2^7$, a to je soba 128. Zatim se ljudima iz prvog od beskonačnih autobusa dodeljuje soba broj: sledeći prost broj, 3, stepenovan brojem njihovog sedišta u autobusu. Tako osoba na sedištu broj 7 u prvom autobusu odlazi u sobu broj $3^7$ to jest u sobu 2.187. To se nastavlja za ceo prvi autobus. Putnicima iz drugog autobusa se dodeljuju eksponenti sledećeg prostog broja, 5. Sledećem autobusu, eksponenti broja 7. Sledećim autobusima: eksponenti broja 11, eksponenti broja 13, broja 17 i tako dalje.
 
+\hspace{7cm}
 
 \begin{center}
 \renewcommand{\arraystretch}{1.5}
+\setlength{\tabcolsep}{4pt}
   \begin{tabular}{ |c|c|c|c|c|c|c|c| }
     \hline
     Dodeljivanje&\multicolumn{7}{ |c| }{Broj sobe} \\\cline{2-8}
@@ -150,16 +150,21 @@ Ovog puta imamo beskonačnu kolonu beskonačno velikih autobusa, sa po \textbf {
   \end{tabular}
 \end{center}
 
+\hspace{7cm}
 
 \subsection{Euklidov dokaz: beskonačno prostih brojeva}
-Neka je dat bilo koji konačni skup prirodnih brojeva $p_{1}, p_{2}, ..., p_{n}$. Biće pokazano da postoji barem još jedan prost broj koji se ne nalazi u listi. Neka je $P$ proizvod svih prostih brojeva u skupu: $P = p_{1}p_{2}...p_{n}$. Neka je $q = P + 1$. Tada $q$ ili jeste ili nije prost broj:
+Euklid je izneo ovaj dokaz u svom delu „Elementi”.
+
+Neka je dat bilo koji konačni skup prostih brojeva $p_{1}, p_{2}, ..., p_{n}$. Biće pokazano da postoji barem još jedan prost broj koji se ne nalazi u tom skupu.
+
+Neka je $P$ proizvod svih prostih brojeva u skupu: $P = p_{1}p_{2}...p_{n}$. Neka je $q = P + 1$. Tada $q$ ili jeste ili nije prost broj:
 \begin{itemize}
 \item Ako je $q$ prost, onda postoji bar jedan broj ($q$) koji je prost, a nije u prvobitnom skupu.
 \item Ako $q$ nije prost, onda neki prost broj $p$ deli $q$. Kad bi ovaj broj $p$ bio u skupu, tada bi on delio $P$ (jer je $P$ proizvod svih brojeva u skupu); ali $p$ deli $P + 1 = q$. Ako $p$ deli $P$ i $q$, onda bi $p$ morao da deli razliku
 \cite{objasnjenje_deljenja} ova dva broja, što je $(P + 1) - P$ ili jednostavno 1. Kako nijedan prost broj ne deli 1, $p$ ne može biti u skupu. Ovo znači da barem još jedan prost broj mora postojati mimo onih koji su već u skupu.
 \end{itemize} 
 
-Ovo dokazuje da za svaki konačni skup prostih brojeva postoji prost broj koji nije u tom skupu, i stoga prostih brojeva mora biti beskonačno mnogo.
+Ovo dokazuje da za svaki konačni skup prostih brojeva postoji prost broj koji nije u tom skupu i stoga prostih brojeva mora biti beskonačno mnogo.
 
 \section{Princip neprebrojivosti}
 Razlog zašto je sve ovo bilo moguće je zato što smo radili sa najnižim nivoom beskonačnosti, to jest sa prebrojivom beskonačnošću. Dokazali smo da su skupovi prirodnih, celih i racionalnih brojeva prebrojiva beskonačnost. Ali, šta važi za skup realnih brojeva? 
@@ -167,22 +172,21 @@ Razlog zašto je sve ovo bilo moguće je zato što smo radili sa najnižim nivoo
 Da bismo dokazali da je skup realnih brojeva neprebojiv, problem ćemo prvo svesti na manji skup. 
 Prvo ćemo dokazati da je skup x $\in$ (0,1) neprebrojiv.
 \newline
-Pretpostavimo suprotno, to jest da je skup skup x $\in$ (0,1) prebrojiv.
-Prvo moramo da primetimo da proizvoljan broj iz intervala (0,1) nema jedinstveni zapis. 
-1/4=0.2500000 i 1/4=0.249999
-Dogovorićemo se da koristimo oblik broja koji sadrži konačan broj nenula decimala (1/4=0.249999)
-Pretpostavkom da je skup x $\in$ (0,1) prebrojiv, zaključujemo da se taj skup može zapisati u obliku niza {x1,x2,x3}.
+Pretpostavimo suprotno, to jest da je skup x $\in$ (0,1) prebrojiv.
+Prvo moramo da primetimo da proizvoljan broj iz intervala (0,1) nema jedinstveni zapis ($1/4=0.2500000$ i $1/4=0.249999$).
+Dogovorićemo se da koristimo oblik broja koji sadrži konačan broj nenula decimala ($1/4=0.249999$).
+Pretpostavkom da je skup x $\in$ (0,1) prebrojiv, zaključujemo da se taj skup može zapisati u obliku niza $\{x_{1},x_{2},x_{3},...,x_{n}\}$.
 \newline
-Ove brojeve mozemo predstaviti na sledeći način:
+Ove brojeve možemo predstaviti na sledeći način:
  \begin{figure}[ht!]
     \begin{center}
     \includegraphics[scale=1.00]{tnp.png}
     \end{center}
     \end{figure}
 \newpage
-Posmatrajmo niz brojeva koji dobijemo na dijagonali date šeme:
+Posmatrajmo niz brojeva koji dobijemo na dijagonali date šeme:\\
 
-$a_{11}$,$a_{22}$,$a_{33}$....$a_{nn}$
+$a_{11}$,$a_{22}$,$a_{33}$....$a_{nn}$\\
 
 Formirajmo decimalni broj gde je:
 \begin{figure}[ht!]
@@ -191,9 +195,13 @@ Formirajmo decimalni broj gde je:
     \end{center}
     \end{figure}
 
-Ovaj broj nismo dobili u šemi, a obzirom da smo počeli sa pretpostavkom da x $\in$ (0,1), dobijamo kontradikciju.
+Ovaj broj nismo dobili u šemi, a s obzirom na to da smo počeli sa pretpostavkom da $x \in (0,1)$, dobijamo kontradikciju.\\
+
+Pošto važi $\mathbb{Q}\subset \mathbb{R}$, zaključujemo da je neprebrojiva beskonačnost brojnija od prebrojive. Ona se obeležava sa $c$, a ne sa $\aleph_{1}$, na šta se može naići u literaturi. Razlog takvog označavanja je činjenica da ne znamo da li postoji beskonačnost koja je „veća” od prebrojive, a „manja” od neprebrojive, tj. ne znamo je li $c$ prvi sledbenik $\aleph_{0}$.\\
+
 \section{Zaključak}
-Ovime smo pokazali da naš um može da razume koncepte samo najnižeg nivoa beskonačnosti, to jest prebrojive beskonačnosti.
+\label{poglavlje:Zaključak}
+Ovime smo pokazali da naš um može da razume samo koncept najnižeg nivoa beskonačnosti, to jest prebrojive beskonačnosti.
 Pokušaj da se smesti neprebrojivo beskonačno mnogo ljudi u hotel je nemoguć. Ovim radom smo pokušali objasniti koncept beskonačnosti kroz primer Hilbertovog hotela.
 
 
@@ -205,7 +213,9 @@ Pokušaj da se smesti neprebrojivo beskonačno mnogo ljudi u hotel je nemoguć. 
 
 \bibitem{Kantorov dijagonalni postupak} Tabela čije su prva vrsta ($p$) i prva kolona ($q$) prirodni brojevi (1,2,3,...). U presecima odgovarajućih vrsta i kolona dobijaju se racionalni brojevi oblika $\frac{p}{q}$, a nabrajaju se po dijagonalama ($\frac{1}{1}, \frac{2}{1}$, $\frac{1}{2}$, $\frac{1}{3}$, $\frac{2}{2}$, $\frac{3}{1}$,...)
 
-\bibitem{objasnjenje_deljenja}U opštem slučaju, za svaka tri cela broja a, b, c ako $a \mid b$ i $a \mid c$ onda $a \mid (b - c)$.
+\bibitem{David Hilbert} David Hilbert (Kenigsberg, 1862-1943) - nemački matematičar
+
+\bibitem{objasnjenje_deljenja}U opštem slučaju, za svaka tri cela broja a, b, c važi: ako $a \mid b$ i $a \mid c$ onda $a \mid (b - c)$.
 
 
 
