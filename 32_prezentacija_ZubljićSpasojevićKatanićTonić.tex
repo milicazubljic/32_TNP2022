@@ -1,0 +1,55 @@
+\documentclass{beamer}
+\usepackage{beamerthemeshadow}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\definecolor{darkblue}{rgb}{0.11,0.27,0.55}
+\setbeamercolor{structure}{fg=darkblue}
+
+\def\d{{\fontencoding{T1}\selectfont\dj}}
+\def\D{{\fontencoding{T1}\selectfont\DJ}}
+
+\title{Vrste beskonačnosti. Paradoks Hilbertovog hotela}
+\subtitle{-- Tehničko i naučno pisanje --}
+\author{Milica Zubljić, Dimitrije Spasojević, Branko Katanić, Luka Tonić}
+\institute{Matematički fakultet\\Univerzitet u Beogradu}
+\date{
+	\footnotesize{Beograd, 2022.}	
+}
+
+\begin{document}
+\begin{frame}
+	\thispagestyle{empty}
+	\titlepage
+\end{frame}
+
+\addtocounter{framenumber}{-1}
+
+\begin{frame}
+	\frametitle{Sadržaj} 
+	\tableofcontents[hidesubsections] 
+\end{frame}
+
+\section{Hilbertov hotel}
+\begin{frame}[fragile]\frametitle{Konačan broj gostiju}
+\begin{itemize}
+    \item \textbf{Hilbertov hotel}-Hotel sa beskonačno mnogo soba
+    \item Ako je ovaj hotel pun, da li postoji način da oslobodimo još jednu sobu?
+    \begin{itemize}
+        \item Kada svakog gosta iz sobe $n$ zamolimo da predje u sobu $n+1$, prva soba će ostati prazna
+        \item Ista formula važi za svaki konačan broj gostiju
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Beskonačan broj gostiju}
+\begin{itemize}
+    \item Pred hotelom je sada beskonačno veliki autobus sa prebrojivo beskonačno mnogo gostiju
+    \item Problem postaje nešto komplikovaniji kada treba napraviti mesta za beskonačno novih gostiju
+    \item Sada će svaki gost iz sobe $n$ preći u sobu $2n$, i tako ćemo osloboditi sve sobe sa neparnim brojem
+    \item Pošto neparnih brojeva ima beskonačno mnogo, ovim procesom oslobodili smo beskonačno mnogo soba
+\end{itemize}
+\end{frame}
+
+\end {document}
