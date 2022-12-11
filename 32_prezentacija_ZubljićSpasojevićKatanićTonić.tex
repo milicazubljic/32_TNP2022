@@ -7,10 +7,8 @@
 \usepackage{hyperref}
 \definecolor{darkblue}{rgb}{0.11,0.27,0.55}
 \setbeamercolor{structure}{fg=darkblue}
-
 \def\d{{\fontencoding{T1}\selectfont\dj}}
 \def\D{{\fontencoding{T1}\selectfont\DJ}}
-
 \title{Vrste beskonačnosti. Paradoks Hilbertovog hotela}
 \subtitle{-- Tehničko i naučno pisanje --}
 \author{Milica Zubljić, Dimitrije Spasojević, Branko Katanić, Luka Tonić}
@@ -18,28 +16,26 @@
 \date{
 	\footnotesize{Beograd, 2022.}	
 }
-
 \begin{document}
 \begin{frame}
 	\thispagestyle{empty}
 	\titlepage
 \end{frame}
-
 \addtocounter{framenumber}{-1}
-
 \begin{frame}[fragile]\frametitle{Literatura}
 	\begin{itemize}
 		\item Zasnovano na:\\
-		Milica Zubljić, Dimitrije Spasojević, Branko Katanić, Luka Tonić: Vrste beskonačnosti. Paradoks Hilbertovog hotela, 2022.\\
+
+  Milica Zubljić, Dimitrije Spasojević, Branko Katanić, Luka Tonić: Vrste beskonačnosti. Paradoks Hilbertovog hotela, 2022.\\
 		(\url{https://github.com/milicazubljic/32_TNP2022/blob/main/32_ZubljicKatanicSpasojevicTonic.pdf})
-	\end{itemize}
+
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Pregled} 
 	\tableofcontents[hidesubsections] 
 \end{frame}
-
 \section{Uvod}
 \begin{frame}
     \frametitle{Pojam beskonačnosti}
@@ -53,7 +49,6 @@
         \end{itemize}
     \end{itemize}
 \end{frame}
-
 \begin{frame}
     \frametitle{Prebrojivost}
     \begin{itemize}
@@ -61,7 +56,6 @@
         \item Neprebrojivost skupova $\mathbb{R}$ i $\mathbb{I}$
     \end{itemize}
 \end{frame}
-
 \section{Hilbertov hotel}
 \begin{frame}[fragile]\frametitle{Konačan broj gostiju}
 \begin{itemize}
@@ -92,28 +86,27 @@
 \begin{frame}[fragile]\frametitle{Beskonačan broj autobusa sa beskonačno gostiju}
 \begin{itemize}
     \item Pred hotelom je sada beskonačna kolona autobusa sa \textbf{prebrojivo} beskonačno mnogo putnika
-    \item Da bismo smestili sve nove goste moramo da uradimo sledecće korake:
+    \item Da bismo smestili sve nove goste moramo da primenimo sledeće korake:
     \begin{itemize}
         \item Prvo postojeće goste šaljemo u sobu sa prvim prostim brojem 2 stepenovanim brojem njihove trenutne sobe.
-        \item Sada gostima iz prvog autobusa dodeljujemo sledeći prost broj 3 stepenovan brojem nihovog sedišta.
-        \item Putnicima iz sledećeg autobusa se dodeljuju eksponenti sledećeg prostog broja
+        \item Sada gostima iz prvog autobusa dodeljujemo sledeći prost broj 3 stepenovan brojem njihovog sedišta.
+        \item Putnicima iz sledećeg autobusa dodeljuju se eksponenti sledećeg prostog broja.
     \end{itemize}
 \end{itemize}
 \end{frame}
-
 \begin{frame}[fragile]\frametitle{Euklidov dokaz: beskonačno prostih brojeva}
 \begin{itemize}
     \item Euklid je izneo dokaz da prostih brojeva ima beskonačno mnogo u svom delu „Elementi”
-    \item Dat bilo koji konačni skup prostih brojeva $p_{1}, p_{2}, ..., p_{n}$
+    \item Dat je bilo koji konačni skup prostih brojeva $p_{1}, p_{2}, ..., p_{n}$
     \item $P = p_{1}p_{2}...p_{n}$
-    \item Neka je $q = P + 1$. Tada $q$ ili jeste ili nije prost broj
+    \item Neka je $q = P + 1$. Tada $q$ ili jeste ili nije prost broj.
     \begin{itemize}
         \item Ako je $q$ prost, onda postoji bar jedan broj ($q$) koji je prost, a nije u prvobitnom skupu.
-        \item Ako $q$ nije prost, onda neki prost broj $p$ deli $q$. Kad bi ovaj broj $p$ bio u skupu, tada bi on delio $P$ ali bi $p$ delilo i $q$. Ako $p$ deli $P$ i $q$, onda bi $p$ morao da deli razliku ova dva broja. Pošto nijedan prost broj ne deli 1 $p$ ne može pripadati skupu.
+
+                \item Ako $q$ nije prost, onda neki prost broj $p$ deli $q$. Kad bi ovaj broj $p$ bio u skupu, tada bi on delio $P$, ali bi $p$ delilo i $q$. Ako $p$ deli $P$ i $q$, onda bi $p$ morao da deli razliku ova dva broja. Pošto nijedan prost broj ne deli 1, $p$ ne može pripadati skupu.
     \end{itemize}
 \end{itemize}
 \end{frame}
-
 \section{Princip neprebrojivosti}
 \begin{frame}[fragile]\frametitle{Neprebrojivost}
 \begin{itemize}
@@ -132,8 +125,6 @@
  \item Paradoks Hilbertovog hotela nam na dobar način objašnjava značaj koncepta beskonačnosti
     \item Glavni motiv analiziranja različitih vrsta beskonačnosti i paradoksa Hilbertovog hotela je razumevanje
     skupova brojeva koje svakodnevno koristimo kao što su skup prirodnih, celih i realnih brojeva
-
 \end{itemize}
 \end{frame}
-
 \end {document}
